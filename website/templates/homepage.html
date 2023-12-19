@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Our Website</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+      }
+      section {
+        margin: 20px 0;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn-announcement {
+        background-color: #2196f3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Our Website</h1>
+      <p>Explore the latest announcements and news.</p>
+    </header>
+
+    <section>
+      <p>
+        Hello,We are delighted to have you on our website. This platform
+        provides you with the latest announcements and news, keeping you
+        informed and up-to-date.
+      </p>
+
+      <p>
+        Feel free to explore the content by choosing one of the options below:
+      </p>
+
+      <a href="{% url 'announcements' %}" class="btn btn-announcement"
+        >Announcements</a
+      >
+      <a href="{% url 'news' %}" class="btn">News</a>
+    </section>
+
+    <footer>
+      <p>
+        As a memory to Sofia Mohammed, a Muslim girl. Esube stated to care
+        about.
+      </p>
+    </footer>
+  </body>
+</html>

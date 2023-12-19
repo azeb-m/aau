@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Detail</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+      }
+      section {
+        margin: 20px 0;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .news-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .news-text {
+        margin-left: 20px;
+      }
+      .see-more {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #2196f3;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>News and announcements</h1>
+    </header>
+
+    <section>
+      {% for content_info in message %}
+      <div class="news-container">
+        <img src="{{content_info.image_link}}" alt="News Image" />
+        <div class="news-text">
+          <h2>{{content_info.title}}</h2>
+          <p>{{ content_info.date_posted }}</p>
+          <p>{{ content_info.sample_text}}</p>
+          <!-- 'See More' link leading to the detail page of each news -->
+          <a href="{{content_info.link}}" class="see-more">See More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+
+    <footer>
+      <p>All rights reserved.</p>
+    </footer>
+  </body>
+</html>
